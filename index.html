@@ -8,14 +8,16 @@
     <h1>Check the console for URL info</h1>
 
     <script>
-        // Full URL
+        // 1 Full URL
         const fullURL = location.href;
         console.log("Full URL:", fullURL);
 
-        // URL up to index.html (path + file)
-        const pathWithFile = location.pathname;
-        const baseURL = location.origin + pathWithFile;
-        console.log("URL up to index.html:", baseURL);
+        // 2 URL up to folder (excluding index.html)
+        const path = location.pathname;
+        // Remove the last part (file name) from the path
+        const folderPath = path.substring(0, path.lastIndexOf('/') + 1);
+        const baseURL = location.origin + folderPath;
+        console.log("URL up to folder (without index.html):", baseURL);
     </script>
 </body>
 </html>
