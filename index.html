@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Example</title>
+</head>
+<body>
+    <h1>Check the console for URL info</h1>
+
+    <script>
+        // Full URL
+        const fullURL = location.href;
+        console.log("Full URL:", fullURL);
+
+        // URL up to index.html (path + file)
+        const pathWithFile = location.pathname;
+        const baseURL = location.origin + pathWithFile;
+        console.log("URL up to index.html:", baseURL);
+    </script>
+</body>
+</html>
