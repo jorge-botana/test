@@ -18,6 +18,10 @@
         const folderPath = path.substring(0, path.lastIndexOf('/') + 1);
         const baseURL = location.origin + folderPath;
         console.log("URL up to folder (without index.html):", baseURL);
+
+        // Remaining part (filename)
+        const filename = path.substring(path.lastIndexOf('/') + 1);
+        console.log("Remaining part (filename):", filename);
     </script>
 </body>
 </html>
